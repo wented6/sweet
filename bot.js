@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const meercy = new Discord.Client();
 
-const adminprefix = "S";
-const devs = ['538676483455975431','564794492473835520'];
+const adminprefix = "W";
+const devs = ['564794492473835520'];
 meercy.on('message', message => {
-    console.log("oNNN");
+ console.log("oN");   
      
 
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -14,11 +14,6 @@ if (message.content.startsWith(adminprefix + 'pl')) {
   meercy.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
 } else 
-  if (message.content.startsWith(adminprefix + 'setname')) {
-meercy.user.setUsername(argresult).then
-    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
-return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
-} else
   if (message.content.startsWith(adminprefix + 'setavatar')) {
 meercy.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
