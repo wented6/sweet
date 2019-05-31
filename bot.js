@@ -13,11 +13,7 @@ meercy.on('message', message => {
 if (message.content.startsWith(adminprefix + 'pl')) {
   meercy.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
-} else 
-  if (message.content.startsWith(adminprefix + 'setavatar')) {
-meercy.user.setAvatar(argresult);
-  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-      } else     
+} else   
 if (message.content.startsWith(adminprefix + 'ls')) {
    meercy.user.setActivity(argresult, {type:'Listening'});
     message.channel.send(` تم تغير اللسننق ألى **${argresult} \** `)
@@ -27,8 +23,6 @@ if (message.content.startsWith(adminprefix + 'wt')) {
     message.channel.send(` تم تغير الواتشنق ألى **${argresult} \** `)
 }
 });
-
-
 
 meercy.on('ready', () => {
   meercy.user.setStatus("idle")
